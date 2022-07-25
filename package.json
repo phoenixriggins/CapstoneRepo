@@ -11,13 +11,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "buffer": "^6.0.3",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "1.19.1"
+    "prettier": "1.19.1",
+    "process": "^0.11.10"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
+    "html-literal": "^1.1.0",
+    "lodash": "^4.17.21",
+    "navigo": "^8.11.1",
+    "parcel": "2.5",
     "yargs-parser": ">=13.1.2"
   }
 }
