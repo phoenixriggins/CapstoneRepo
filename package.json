@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "parcel-build": "parcel build index.html && cp _redirects ./dist/",
-    "serve": "parcel index.html"
+    "serve": "parcel index.html",
+    "app:watch": "nodemon --watch ./server -e js ./server/app.js",
+    "start": "node ./server/app.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +22,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "html-literal": "^1.1.0",
     "lodash": "^4.17.21",
     "mongoose": "^6.5.0",
