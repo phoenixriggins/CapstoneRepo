@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "yoster-island-regular";
+  src: url(yoster-island/yoster.ttf);
+ }
+
+body {
+  font-family: "yoster-island-regular";
+}
+
+.item-a{
+  grid-area: header;
+}
+
+.item-b{
+  grid-area: nav;
+}
+
+.item-c{
+  grid-area: main;
+}
+
+.item-d{
+  grid-area: footer;
+}
+
+.container {
+  display: grid;
+  grid-template:
+  [row1-start] "header header header" 25px [row1-end]
+  [row2-start] "footer footer footer" 400px [row2-end]
+  / auto 50px auto;
+}
+
+
