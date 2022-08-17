@@ -14,13 +14,6 @@ mongoose.connect(process.env.MONGODB);
 
 const db = mongoose.connection;
 
-const logging = (request, response, next) => {
-  console.log(`${request.method} ${request.url} ${Date.now()}`);
-  next();
-};
-
-// add cors middleware
-
 const cors = (req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Headers",
@@ -34,6 +27,12 @@ const cors = (req, res, next) => {
   res.setHeader("Access-Control-Allow-Credentials", true);
   next();
 };
+
+const logging = (request, response, next) => {
+  console.log(`${request.method} ${request.url} ${Date.now()}`);
+  next();
+};
+
 
 
 db.on("error", console.error.bind(console, "Connection Error:"));

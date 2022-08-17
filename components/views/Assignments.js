@@ -2,170 +2,177 @@ import html from "html-literal";
 export default () => html`
   <div class="container">
     <section>
-      <form>
+
         <div id="assignments">
-          <div class="assignment 1">
-            <section>
-              <label for="class1">Class:</label>
-              <input type="text" id="class1" required />
+        <div class="assignment 1">
+  <form>
+    <section>
 
-              <label for="as1">assignment name:</label>
-              <input type="text" id="as1" required />
+       <input type="text" id="class1" required placeholder="class name" />
 
-              <label for="ad1">assignment description:</label>
-              <input type="text" id="ad1" />
 
-              <label for="priority">Priority:</label>
-              <select name="priority" required>
-                <option value="low">Low</option>
-                <option value="normal">Normal</option>
-                <option value="important">Important</option>
-                <option value="critical">Critical</option>
-              </select>
+       <input type="text" id="as1" required placeholder="assignment name" />
 
-              <label for="date due">Date Due:</label>
-              <select name="Due date" required>
-                <option></option>
-              </select>
-              <label for="time due">Time Due:</label>
-              <select name="time due" required>
-                <option></option>
-              </select>
-            </section>
-          </div>
 
-          <div class="assignment 2">
-            <section>
-              <form>
-                <label for="class2">Class:</label>
-                <input type="text" id="class2" />
-              </form>
+       <input type="text" id="ad1" placeholder="assignment descsription"/>
 
-              <label for="as2">assignment name:</label>
-              <input type="text" id="as2" required />
+       <label for="priority">Priority:</label>
+        <select name="priority" required>
+          <option value="low">Low</option>
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+          <option value="critical">Critical</option>
+        </select>
 
-              <label for="ad2">assignment description:</label>
-              <input type="text" id="ad2" />
+      <label for="date due">Date Due:</label>
+       <select name="Due date" required>
+        <option>date</option>
+       </select>
+      <label for="time due">Time Due:</label>
+       <select name="time due" required>
+        <option>time</option>
+       </select>
+    </section>
+  <input type="submit" />
+ </form>
+</div>
 
-              <label for="priority">Priority:</label>
-              <select name="priority">
-                <option value="low">Low</option>
-                <option value="normal">Normal</option>
-                <option value="important">Important</option>
-                <option value="critical">Critical</option>
-              </select>
+<div class="assignment 2">
+  <form>
+    <section>
 
-              <label for="date due">Date Due:</label>
-              <select>
-                <option></option>
-              </select>
-              <label for="time due"> Due</label>
-              <select>
-                <option></option>
-              </select>
-            </section>
-          </div>
+       <input type="text" id="class2" required placeholder="class name" />
 
-          <div class="assignment 3">
-            <section>
-              <form>
-                <label for="class3">Class:</label>
-                <input type="text" id="class3" />
-              </form>
 
-              <label for="as3">assignment name:</label>
-              <input type="text" id="as3" required />
+       <input type="text" id="as2" required placeholder="assignment name" />
 
-              <label for="ad3">assignment description:</label>
-              <input type="text" id="ad3" />
 
-              <label for="priority">Priority:</label>
-              <select name="priority">
-                <option value="low">Low</option>
-                <option value="normal">Normal</option>
-                <option value="important">Important</option>
-                <option value="critical">Critical</option>
-              </select>
+       <input type="text" id="ad2" placeholder="assignment descsription"/>
 
-              <label for="date due">Date Due:</label>
-              <select>
-                <option></option>
-              </select>
-              <label for="time due">Time Due</label>
-              <select>
-                <option></option>
-              </select>
-            </section>
-          </div>
+       <label for="priority">Priority:</label>
+        <select name="priority" required>
+          <option value="low">Low</option>
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+          <option value="critical">Critical</option>
+        </select>
 
-          <div class="assignment 4">
-            <section>
-              <form>
-                <label for="class4">Class:</label>
-                <input type="text" id="class4" />
-              </form>
+      <label for="date due">Date Due:</label>
+       <select name="Due date" required>
+        <option>date</option>
+       </select>
+      <label for="time due">Time Due:</label>
+       <select name="time due" required>
+        <option>time</option>
+       </select>
+    </section>
+  <input type="submit" />
+ </form>
+</div>
 
-              <label for="as4">assignment name:</label>
-              <input type="text" id="as4" required />
+<div class="assignment 3">
+  <form>
+    <section>
 
-              <label for="ad4">assignment description:</label>
-              <input type="text" id="ad4" />
+       <input type="text" id="class3" required placeholder="class name" />
 
-              <label for="priority">Priority:</label>
-              <select name="priority">
-                <option value="low">Low</option>
-                <option value="normal">Normal</option>
-                <option value="important">Important</option>
-                <option value="critical">Critical</option>
-              </select>
 
-              <label for="date due">Date Due:</label>
-              <select>
-                <option></option>
-              </select>
-              <label for="time due">Time Due</label>
-              <select>
-                <option></option>
-              </select>
-            </section>
-          </div>
+       <input type="text" id="as3" required placeholder="assignment name" />
 
-          <div class="assignment 5">
-            <section>
-              <form>
-                <label for="class5">Class:</label>
-                <input type="text" id="class5" />
-              </form>
 
-              <label for="as5">assignment name:</label>
-              <input type="text" id="as5" required />
+       <input type="text" id="ad3" placeholder="assignment descsription"/>
 
-              <label for="ad5">assignment description:</label>
-              <input type="text" id="ad5" />
+       <label for="priority">Priority:</label>
+        <select name="priority" required>
+          <option value="low">Low</option>
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+          <option value="critical">Critical</option>
+        </select>
 
-              <label for="priority">Priority:</label>
-              <select name="priority">
-                <option value="low">Low</option>
-                <option value="normal">Normal</option>
-                <option value="important">Important</option>
-                <option value="critical">Critical</option>
-              </select>
+      <label for="date due">Date Due:</label>
+       <select name="Due date" required>
+        <option>date</option>
+       </select>
+      <label for="time due">Time Due:</label>
+       <select name="time due" required>
+        <option>time</option>
+       </select>
+    </section>
+  <input type="submit" />
+ </form>
+</div>
 
-              <label for="date due">Date Due:</label>
-              <select>
-                <option></option>
-              </select>
-              <label for="time due">Time Due</label>
-              <select>
-                <option></option>
-              </select>
-            </section>
-          </div>
-        </div>
-        <input type="submit" />
-      </form>
+<div class="assignment 4">
+  <form>
+    <section>
+
+       <input type="text" id="class4" required placeholder="class name" />
+
+
+       <input type="text" id="as4" required placeholder="assignment name" />
+
+
+       <input type="text" id="ad4" placeholder="assignment descsription"/>
+
+       <label for="priority">Priority:</label>
+        <select name="priority" required>
+          <option value="low">Low</option>
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+          <option value="critical">Critical</option>
+        </select>
+
+      <label for="date due">Date Due:</label>
+       <select name="Due date" required>
+        <option>date</option>
+       </select>
+      <label for="time due">Time Due:</label>
+       <select name="time due" required>
+        <option>time</option>
+       </select>
+    </section>
+  <input type="submit" />
+ </form>
+</div>
+
+<div class="assignment 5">
+  <form>
+    <section>
+
+       <input type="text" id="class5" required placeholder="class name" />
+
+
+       <input type="text" id="as5" required placeholder="assignment name" />
+
+
+       <input type="text" id="ad5" placeholder="assignment descsription"/>
+
+       <label for="priority">Priority:</label>
+        <select name="priority" required>
+          <option value="low">Low</option>
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+          <option value="critical">Critical</option>
+        </select>
+
+      <label for="date due">Date Due:</label>
+       <select name="Due date" required>
+        <option>date</option>
+       </select>
+      <label for="time due">Time Due:</label>
+       <select name="time due" required>
+        <option>time</option>
+       </select>
+    </section>
+  <input type="submit" />
+ </form>
+</div>
+
       <footer></footer>
       <script src="index.js"></script>
     </section>
   </div>
+</div>
+</div>
 `;
