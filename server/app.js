@@ -33,8 +33,6 @@ const logging = (request, response, next) => {
   next();
 };
 
-
-
 db.on("error", console.error.bind(console, "Connection Error:"));
 db.once(
   "open",
