@@ -41,6 +41,7 @@ db.once(
   "open",
   console.log.bind(console, "Successfully opened connection to Mongo!")
 );
+app.use(cors);
 app.use(express.json());
 app.use(logging);
 

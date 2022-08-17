@@ -21,11 +21,11 @@ const trackerSchema = new mongoose.Schema({
   },
 
   timedue: {
-    type: dateTime,
+    type: Date,
     required: true
   },
   priority: {
-type:
+    type: String
   }
 });
 
