@@ -20,17 +20,16 @@ const trackerSchema = new mongoose.Schema({
 
   duedate: {
     type: Date,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
+    required: true
   },
 
   timedue: {
     type: Date,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
+    required: true
   },
   priority: {
     type: String,
+    required: true,
     validate: /^[A-Za-z0-9 ]*$/
   }
 });
