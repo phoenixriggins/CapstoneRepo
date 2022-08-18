@@ -17,12 +17,28 @@ function render(state = store.Home) {
   afterRender();
 }
 
-function afterRender() {
+function afterRender(state) {
   // add menu toggle to bars icon in nav bar
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
 }
+
+if (state.view === "Assignments") {
+  document.querySelector("form").addEventListener("submit", event => {
+    event.preventDefault();
+
+    const inputList = event.target.elements;
+    console.log("Input Element List", inputList);
+
+    const requestData = {
+      classname: inputList.classname.value,
+      assingmentname: inputList.assingmentname.value,
+      duedate: inputList.duedate.value,
+      priority: inputList.priority.value,
+      timedue: inputList.timedue.value
+    };
+    console.log("request Body", requestData);
 
 router.hooks({
   before: (done, params) => {
@@ -35,31 +51,14 @@ router.hooks({
     switch (view) {
       case "Home": {
         axios
-          .get(
-            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
-          )
-          .then(response => {
-            const kelvinToFahrenheit = kelvinTemp =>
-              Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
-            store.Home.weather = {};
-            store.Home.weather.city = response.data.name;
-            store.Home.weather.temp = kelvinToFahrenheit(
-              response.data.main.temp
-            );
-            store.Home.weather.feelsLike = kelvinToFahrenheit(
-              response.data.main.feels_like
-            );
-            store.Home.weather.description = response.data.weather[0].main;
-            done();
-          })
-          .catch(err => console.log(err));
-        break;
+          .get(`https://oober-tracker.herokuapp.com/trackers`)
+
       }
-      case "Pizza": {
+      case "Tracker": {
         axios
-          .get(`${process.env.PIZZA_PLACE_API_URL}`)
+          .get(`${process.env.TO_DO_API_URL}`)
           .then(response => {
-            store.Pizza.pizzas = response.data;
+            store.Tracker.trackers = response.data;
             done();
           })
           .catch(error => {
