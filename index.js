@@ -40,6 +40,19 @@ if (state.view === "Assignments") {
     };
     console.log("request Body", requestData);
 
+    axios
+      .post(`${process.env.TO_DO_API_URL}`, requestData)
+      .then(response => {
+        // Push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+        store.Tracker.trackers.push(response.data);
+        router.navigate("/Tracker");
+      })
+      .catch(error => {
+        console.log("It puked", error);
+      });
+  });
+}
+
 router.hooks({
   before: (done, params) => {
     const view =
@@ -50,9 +63,8 @@ router.hooks({
     // Add a switch case statement to handle multiple routes
     switch (view) {
       case "Home": {
-        axios
-          .get(`https://oober-tracker.herokuapp.com/trackers`)
-
+        axios.get(`https://oober-tracker.herokuapp.com/trackers`);
+        break;
       }
       case "Tracker": {
         axios
