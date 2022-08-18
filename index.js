@@ -14,7 +14,7 @@ function render(state = store.Home) {
     ${Footer()}
   `;
   router.updatePageLinks();
-  afterRender();
+  afterRender(state);
 }
 
 function afterRender(state) {
@@ -22,35 +22,35 @@ function afterRender(state) {
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
-}
 
-if (state.view === "Assignments") {
-  document.querySelector("form").addEventListener("submit", event => {
-    event.preventDefault();
+  if (state.view === "Assignments") {
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
 
-    const inputList = event.target.elements;
-    console.log("Input Element List", inputList);
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
 
-    const requestData = {
-      classname: inputList.classname.value,
-      assingmentname: inputList.assingmentname.value,
-      duedate: inputList.duedate.value,
-      priority: inputList.priority.value,
-      timedue: inputList.timedue.value
-    };
-    console.log("request Body", requestData);
+      const requestData = {
+        classname: inputList.classname.value,
+        assingmentname: inputList.assingmentname.value,
+        duedate: inputList.duedate.value,
+        priority: inputList.priority.value,
+        timedue: inputList.timedue.value
+      };
+      console.log("request Body", requestData);
 
-    axios
-      .post(`${process.env.TO_DO_API_URL}`, requestData)
-      .then(response => {
-        // Push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-        store.Tracker.trackers.push(response.data);
-        router.navigate("/Tracker");
-      })
-      .catch(error => {
-        console.log("It puked", error);
-      });
-  });
+      axios
+        .post(`${process.env.TO_DO_API_URL}`, requestData)
+        .then(response => {
+          // Push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Tracker.trackers.push(response.data);
+          router.navigate("/Tracker");
+        })
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
 }
 
 router.hooks({
