@@ -1,9 +1,10 @@
 import html from "html-literal";
-export default st => html`
+export default () => html`
   <div class="container">
-    <section></section>
     <section>
-      <div id="calendar"></div>
+      <div id="calendar">
+        <img src="./calendar.png" alt="calendar" />
+      </div>
     </section>
   </div>
 `;

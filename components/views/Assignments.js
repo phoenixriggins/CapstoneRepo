@@ -33,7 +33,9 @@ export default () => html`
         <option>time</option>
        </select>
     </section>
+  <div class=submit>
   <input type="submit" />
+  </div>
  </form>
 </div>
 
@@ -66,7 +68,9 @@ export default () => html`
         <option>time</option>
        </select>
     </section>
+    <div class=submit>
   <input type="submit" />
+  </div>
  </form>
 </div>
 
@@ -99,7 +103,9 @@ export default () => html`
         <option>time</option>
        </select>
     </section>
+    <div class=submit>
   <input type="submit" />
+  </div>
  </form>
 </div>
 
@@ -132,7 +138,9 @@ export default () => html`
         <option>time</option>
        </select>
     </section>
+    <div class=submit>
   <input type="submit" />
+  </div>
  </form>
 </div>
 
@@ -165,7 +173,9 @@ export default () => html`
         <option>time</option>
        </select>
     </section>
+    <div class=submit>
   <input type="submit" />
+  </div>
  </form>
 </div>
 

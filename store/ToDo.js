@@ -1,4 +1,4 @@
 export default {
-  header: "To Dos",
+  header: "To Do's",
   view: "ToDo"
 };
