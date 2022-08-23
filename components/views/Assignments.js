@@ -17,7 +17,7 @@ export default () => html`
        <input type="text" id="ad1" placeholder="assignment description"/>
 
        <label for="priority">Priority:</label>
-        <select name="priority" required>
+        <select name="priority" id="priority" required>
           <option value="low">Low</option>
           <option value="normal">Normal</option>
           <option value="important">Important</option>
@@ -25,11 +25,11 @@ export default () => html`
         </select>
 
       <label for="date due">Date Due:</label>
-       <select name="Due date" required>
+       <select name="Due date" id="due" required>
         <option>date</option>
        </select>
       <label for="time due">Time Due:</label>
-       <select name="time due" required>
+       <select name="time due" id="time" required>
         <option>time</option>
        </select>
     </section>
