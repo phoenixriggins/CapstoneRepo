@@ -45,7 +45,7 @@ function afterRender(state) {
         .then(response => {
           // Push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
           store.Tracker.trackers.push(response.data);
-          router.navigate("/ToDo");
+          router.navigate("/Todo");
         })
         .catch(error => {
           console.log("It puked", error);
@@ -63,10 +63,10 @@ router.hooks({
 
     // Add a switch case statement to handle multiple routes
     switch (view) {
-      case "Home": {
-        axios.get(`https://oober-tracker.herokuapp.com/trackers`);
-        break;
-      }
+      // case "Home": {
+      //   axios.get(`https://oober-tracker.herokuapp.com/trackers`);
+      //   break;
+      // }
       case "Tracker": {
         axios
           .get(`${process.env.TO_DO_API_URL}`)
