@@ -12,7 +12,7 @@ const trackerSchema = new mongoose.Schema({
     required: true,
     validate: /^[A-Za-z0-9 ]*$/
   },
-  assigndesc: {
+  assignmentdesc: {
     type: String,
     required: false,
     validate: /^[A-Za-z0-9 ]*$/

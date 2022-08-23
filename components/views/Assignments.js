@@ -14,7 +14,7 @@ export default () => html`
        <input type="text" id="as1" required placeholder="assignment name" />
 
 
-       <input type="text" id="ad1" placeholder="assignment descsription"/>
+       <input type="text" id="ad1" placeholder="assignment description"/>
 
        <label for="priority">Priority:</label>
         <select name="priority" required>

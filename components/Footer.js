@@ -5,6 +5,8 @@ let year = new Date().getFullYear();
 export default () => html`
   <footer>
     &copy;${year}
-    <a href="./about">about!</a>
+    <a href="https://www.linkedin.com/in/phoenix-riggins-b80b63241/"
+      >LinkedIn!</a
+    >
   </footer>
 `;

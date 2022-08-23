@@ -33,6 +33,7 @@ function afterRender(state) {
       const requestData = {
         classname: inputList.classname.value,
         assingmentname: inputList.assingmentname.value,
+        assignmentdesc: inputList.assignmentdesc.value,
         duedate: inputList.duedate.value,
         priority: inputList.priority.value,
         timedue: inputList.timedue.value
@@ -40,11 +41,11 @@ function afterRender(state) {
       console.log("request Body", requestData);
 
       axios
-        .post(`${process.env.TO_DO_API_URL}`, requestData)
+        .post(`${process.env.TO_DO_API}`, requestData)
         .then(response => {
           // Push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
           store.Tracker.trackers.push(response.data);
-          router.navigate("/Tracker");
+          router.navigate("/ToDo");
         })
         .catch(error => {
           console.log("It puked", error);
