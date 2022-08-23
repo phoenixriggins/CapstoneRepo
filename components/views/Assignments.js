@@ -26,11 +26,11 @@ export default () => html`
 
       <label for="date due">Date Due:</label>
        <select name="Due date" id="due" required>
-        <option>date</option>
+        <option value="date">date</option>
        </select>
       <label for="time due">Time Due:</label>
        <select name="time due" id="time" required>
-        <option>time</option>
+        <option value="time">time</option>
        </select>
     </section>
   <div class=submit>

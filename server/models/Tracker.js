@@ -19,11 +19,13 @@ const trackerSchema = new mongoose.Schema({
   },
 
   duedate: {
-    type: String
+    type: String,
+    required: true
   },
 
   timedue: {
-    type: String
+    type: String,
+    required: true
   },
   priority: {
     type: String,
