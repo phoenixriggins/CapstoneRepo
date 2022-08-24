@@ -3,33 +3,27 @@ const mongoose = require("mongoose");
 const trackerSchema = new mongoose.Schema({
   classname: {
     type: String,
-    required: true,
     validate: /^[A-Za-z0-9 ]*$/
   },
 
   assignmentname: {
     type: String,
-    required: true,
     validate: /^[A-Za-z0-9 ]*$/
   },
   assignmentdesc: {
     type: String,
-    required: false,
     validate: /^[A-Za-z0-9 ]*$/
   },
 
   duedate: {
-    type: String,
-    required: true
+    type: String
   },
 
   timedue: {
-    type: String,
-    required: true
+    type: String
   },
   priority: {
     type: String,
-    required: true,
     validate: /^[A-Za-z0-9 ]*$/
   }
 });

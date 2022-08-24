@@ -4,12 +4,20 @@
  }
 
 
+ a {
+  color:gray;
+  }
+  a:hover{
+    color:white;
+  }
+
 body {
   font-family: "yoster-island-regular";
   color: #ac7403df;
   background-image: url(./pictures/bkgimg.jpg);
   text-align: center;
 }
+
 
 .submit{
   position: relative;
