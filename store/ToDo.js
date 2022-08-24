@@ -1,4 +1,5 @@
 export default {
   header: "To Do's",
-  view: "Todo"
+  view: "Todo",
+  tArray: []
 };

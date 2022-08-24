@@ -44,7 +44,7 @@ function afterRender(state) {
         .post(`${process.env.TO_DO_API}/trackers`, requestData)
         .then(response => {
           // Push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Tracker.trackers.push(response.data);
+          store.Tracker.tArray.push(response.data);
           router.navigate("/Todo");
         })
         .catch(error => {
